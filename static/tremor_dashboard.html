@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Tremor Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Parkinson's Tremor Monitoring System</h1>
+            <p class="subtitle">Real-time tremor tracking and analysis for better clinical decisions</p>
+        </div>
+
+        <div id="statusMessage"></div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Patients</div>
+                <div class="stat-value" id="totalPatients">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Readings</div>
+                <div class="stat-value" id="totalReadings">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Data Uploads</div>
+                <div class="stat-value" id="totalUploads">-</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="patientSelect"><strong>Select Patient:</strong></label>
+                <select id="patientSelect">
+                    <option value="">Loading patients...</option>
+                </select>
+                <button id="loadDataBtn" onclick="loadPatientData()">Load Data</button>
+                <button id="refreshBtn" onclick="refreshStats()">🔄 Refresh</button>
+            </div>
+        </div>
+
+        <div id="chartsContainer"></div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
