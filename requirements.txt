@@ -1,0 +1,28 @@
+# Flask Backend Requirements for Tremor Tracker
+
+# Core Flask framework
+Flask==3.0.0
+
+# CORS support for React frontend
+Flask-Cors==4.0.0
+
+# SQLAlchemy ORM for database operations
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.23
+
+# Database drivers (uncomment as needed)
+# For PostgreSQL production deployment:
+# psycopg2-binary==2.9.9
+
+# For MySQL production deployment:
+# PyMySQL==1.1.0
+
+# Additional utilities
+python-dateutil==2.8.2
+
+# For production deployment
+gunicorn==21.2.0
+
+# For testing
+pytest==7.4.3
+pytest-flask==1.3.0
